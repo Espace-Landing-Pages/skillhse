@@ -57,6 +57,7 @@ python3 scripts/install_web_kit.py <project>/public/hse-brand
 - `assets/examples/hse-training-program-test/poster.html` — воспроизводимый digital-макет 1080×1080 с локальными `HSE Sans`, официальным SVG-логотипом и бренд-токенами.
 - `assets/examples/hse-training-program-test/hse-training-program-test.png` — готовый тестовый PNG.
 - `assets/examples/hse-training-program-test/portrait-source.png` — оригинальный синтетический фотослой без текста и логотипов.
+- `assets/examples/hse-training-program-test/portrait-prompt.md` — точный prompt для повторной генерации фотослоя.
 
 Даты и параметры программы в примере вымышлены. Перед реальным использованием заменить содержание и пройти полную проверку ниже.
 

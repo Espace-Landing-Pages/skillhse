@@ -1,0 +1,4 @@
+interface:
+  display_name: "HSE Design System"
+  short_description: "Фирменный стиль и ассеты НИУ ВШЭ"
+  default_prompt: "Используй $hse-design-system, чтобы оформить этот проект по фирменному стилю НИУ ВШЭ."

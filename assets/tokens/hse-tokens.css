@@ -1,0 +1,35 @@
+:root {
+  --hse-color-primary-dark-blue: #0f2d69;
+  --hse-color-primary-blue: #234b9b;
+
+  --hse-color-gray-50: #929292;
+  --hse-color-gray-25: #c6c6c6;
+  --hse-color-gray-10: #e6e6e6;
+
+  --hse-color-accent-blue: #0fa0d7;
+  --hse-color-accent-blue-middle: #7da0d2;
+  --hse-color-accent-blue-light: #cddcf0;
+
+  --hse-color-accent-green: #009b64;
+  --hse-color-accent-green-middle: #46a0a0;
+  --hse-color-accent-green-light: #d7ebb4;
+
+  --hse-color-accent-orange: #eb691e;
+  --hse-color-accent-orange-middle: #eb8c3c;
+  --hse-color-accent-orange-light: #ffdc91;
+
+  --hse-color-accent-purple: #7d50b9;
+  --hse-color-accent-purple-middle: #96648c;
+  --hse-color-accent-purple-light: #d7c3f0;
+
+  --hse-color-accent-red: #e61e3c;
+  --hse-color-accent-red-middle: #cd5a5a;
+  --hse-color-accent-red-light: #f5c3c3;
+
+  --hse-color-accent-yellow: #fab900;
+  --hse-color-accent-yellow-middle: #ffd746;
+  --hse-color-accent-yellow-light: #fff07d;
+
+  --hse-font-sans: "HSE Sans", Arial, sans-serif;
+  --hse-font-slab: "HSE Slab", Georgia, serif;
+}

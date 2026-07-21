@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "name": "HSE Design System",
+    "source": "HSE brandbook, edition 2026-04-10",
+    "sourceUrl": "https://www.hse.ru/info/brandbook/",
+    "officialGuide": "../official/guidelines/HSE-brandbook-2026-04-10.pdf",
+    "accentCoverageMaximumPercent": 25
+  },
+  "font": {
+    "sans": "HSE Sans",
+    "slab": "HSE Slab"
+  },
+  "color": {
+    "primary": {
+      "darkBlue": {
+        "hex": "#0F2D69",
+        "rgb": [15, 45, 105],
+        "cmyk": [100, 80, 0, 40],
+        "pantone": "287 C"
+      },
+      "blue": {
+        "hex": "#234B9B",
+        "rgb": [35, 75, 155],
+        "cmyk": [95, 75, 0, 0],
+        "pantone": "2728 C"
+      }
+    },
+    "gray": {
+      "50": { "hex": "#929292", "rgb": [146, 146, 146], "cmyk": [0, 0, 0, 50] },
+      "25": { "hex": "#C6C6C6", "rgb": [198, 198, 198], "cmyk": [0, 0, 0, 25] },
+      "10": { "hex": "#E6E6E6", "rgb": [230, 230, 230], "cmyk": [0, 0, 0, 10] }
+    },
+    "accent": {
+      "blue": {
+        "base": "#0FA0D7",
+        "middle": "#7DA0D2",
+        "light": "#CDDCF0"
+      },
+      "green": {
+        "base": "#009B64",
+        "middle": "#46A0A0",
+        "light": "#D7EBB4"
+      },
+      "orange": {
+        "base": "#EB691E",
+        "middle": "#EB8C3C",
+        "light": "#FFDC91"
+      },
+      "purple": {
+        "base": "#7D50B9",
+        "middle": "#96648C",
+        "light": "#D7C3F0"
+      },
+      "red": {
+        "base": "#E61E3C",
+        "middle": "#CD5A5A",
+        "light": "#F5C3C3"
+      },
+      "yellow": {
+        "base": "#FAB900",
+        "middle": "#FFD746",
+        "light": "#FFF07D"
+      }
+    }
+  }
+}

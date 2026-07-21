@@ -1,3 +1,4 @@
 assets/original-downloads/** filter=lfs diff=lfs merge=lfs -text
 assets/official/** filter=lfs diff=lfs merge=lfs -text
 assets/fonts/**/*.otf filter=lfs diff=lfs merge=lfs -text
+assets/examples/**/*.png filter=lfs diff=lfs merge=lfs -text

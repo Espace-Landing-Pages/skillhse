@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Тестовый макет программы обучения НИУ ВШЭ</title>
+  <style>
+    @font-face {
+      font-family: "HSE Sans";
+      src: url("../../fonts/hse-sans/HSESans-Regular.otf") format("opentype");
+      font-style: normal;
+      font-weight: 400;
+      font-display: block;
+    }
+
+    @font-face {
+      font-family: "HSE Sans";
+      src: url("../../fonts/hse-sans/HSESans-SemiBold.otf") format("opentype");
+      font-style: normal;
+      font-weight: 600;
+      font-display: block;
+    }
+
+    @font-face {
+      font-family: "HSE Sans";
+      src: url("../../fonts/hse-sans/HSESans-Bold.otf") format("opentype");
+      font-style: normal;
+      font-weight: 700;
+      font-display: block;
+    }
+
+    @font-face {
+      font-family: "HSE Sans";
+      src: url("../../fonts/hse-sans/HSESans-Black.otf") format("opentype");
+      font-style: normal;
+      font-weight: 900;
+      font-display: block;
+    }
+
+    :root {
+      --hse-blue: #0f2d69;
+      --hse-blue-2: #234b9b;
+      --hse-blue-pale: #e8eef8;
+      --hse-gray: #929292;
+      --hse-gray-light: #e6e6e6;
+      --paper: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 1080px;
+      height: 1080px;
+      margin: 0;
+      overflow: hidden;
+      background: var(--paper);
+    }
+
+    body {
+      font-family: "HSE Sans", Arial, sans-serif;
+      color: var(--hse-blue);
+    }
+
+    .poster {
+      position: relative;
+      width: 1080px;
+      height: 1080px;
+      overflow: hidden;
+      background: var(--paper);
+      isolation: isolate;
+    }
+
+    .portrait {
+      position: absolute;
+      z-index: -4;
+      inset: 0 0 0 auto;
+      width: 60%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 64% center;
+      filter: saturate(.93) contrast(1.02);
+    }
+
+    .white-field {
+      position: absolute;
+      z-index: -3;
+      inset: 0 auto 0 0;
+      width: 68%;
+      background: linear-gradient(90deg, #fff 0%, #fff 76%, rgba(255,255,255,.94) 88%, rgba(255,255,255,0) 100%);
+      clip-path: polygon(0 0, 88% 0, 100% 100%, 0 100%);
+    }
+
+    .arc {
+      position: absolute;
+      z-index: -2;
+      top: -292px;
+      left: 492px;
+      width: 610px;
+      height: 610px;
+      border: 68px solid rgba(35, 75, 155, .12);
+      border-radius: 50%;
+    }
+
+    .corner-block {
+      position: absolute;
+      z-index: -1;
+      right: -122px;
+      bottom: -205px;
+      width: 560px;
+      height: 560px;
+      border-radius: 50%;
+      background: var(--hse-blue-2);
+    }
+
+    .grid {
+      position: absolute;
+      z-index: -1;
+      left: 476px;
+      bottom: 56px;
+      width: 145px;
+      height: 116px;
+      opacity: .42;
+      background-image: radial-gradient(circle, var(--hse-blue-2) 4px, transparent 4.8px);
+      background-size: 29px 29px;
+    }
+
+    .logo {
+      position: absolute;
+      top: 58px;
+      left: 60px;
+      width: 438px;
+      height: auto;
+      display: block;
+    }
+
+    .content {
+      position: absolute;
+      top: 236px;
+      left: 60px;
+      width: 560px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      min-height: 35px;
+      margin-bottom: 27px;
+      padding: 7px 15px 6px;
+      border-radius: 999px;
+      background: var(--hse-blue-pale);
+      color: var(--hse-blue-2);
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: .105em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      width: 520px;
+      margin: 0;
+      color: var(--hse-blue);
+      font-size: 87px;
+      font-weight: 900;
+      line-height: .91;
+      letter-spacing: -.035em;
+    }
+
+    .subtitle {
+      width: 470px;
+      margin: 28px 0 0;
+      color: var(--hse-blue);
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 1.18;
+      letter-spacing: -.01em;
+    }
+
+    .meta {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      width: 508px;
+      margin-top: 52px;
+    }
+
+    .meta-item {
+      display: flex;
+      align-items: center;
+      min-height: 70px;
+      padding: 13px 20px 13px 16px;
+      border: 2px solid var(--hse-blue-2);
+      border-radius: 35px;
+      background: rgba(255, 255, 255, .94);
+      color: var(--hse-blue);
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.05;
+    }
+
+    .meta-item.wide {
+      grid-column: 1 / -1;
+    }
+
+    .meta-icon {
+      flex: 0 0 auto;
+      width: 31px;
+      height: 31px;
+      margin-right: 13px;
+      color: var(--hse-blue-2);
+    }
+
+    .meta-icon path,
+    .meta-icon circle,
+    .meta-icon line,
+    .meta-icon rect {
+      stroke: currentColor;
+      stroke-width: 2.3;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+    }
+
+    .note {
+      position: absolute;
+      left: 60px;
+      bottom: 56px;
+      display: flex;
+      align-items: center;
+      color: var(--hse-gray);
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: .02em;
+    }
+
+    .note::before {
+      content: "";
+      width: 28px;
+      height: 2px;
+      margin-right: 11px;
+      background: var(--hse-blue-2);
+    }
+
+    .side-label {
+      position: absolute;
+      z-index: 2;
+      right: 22px;
+      top: 378px;
+      color: rgba(255,255,255,.92);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .19em;
+      text-transform: uppercase;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+<body>
+  <main class="poster" aria-label="Тестовый макет программы обучения НИУ ВШЭ">
+    <img class="portrait" src="portrait-source.png" alt="">
+    <div class="white-field" aria-hidden="true"></div>
+    <div class="arc" aria-hidden="true"></div>
+    <div class="corner-block" aria-hidden="true"></div>
+    <div class="grid" aria-hidden="true"></div>
+
+    <img
+      class="logo"
+      src="../../official/logos/core/short-full-descriptor/light/Short_version_full_name_main/CMYK/01_Short_version_full_name_CMYK.svg"
+      alt="Национальный исследовательский университет «Высшая школа экономики»"
+    >
+
+    <section class="content">
+      <div class="eyebrow">Программа обучения</div>
+      <h1>AI для<br>бизнеса</h1>
+      <p class="subtitle">Практический курс<br>для руководителей</p>
+
+      <div class="meta" aria-label="Параметры программы">
+        <div class="meta-item">
+          <svg class="meta-icon" viewBox="0 0 32 32" aria-hidden="true">
+            <rect x="4.5" y="7" width="23" height="20" rx="4"></rect>
+            <line x1="10" y1="4.5" x2="10" y2="10"></line>
+            <line x1="22" y1="4.5" x2="22" y2="10"></line>
+            <line x1="5" y1="13" x2="27" y2="13"></line>
+          </svg>
+          <span>Старт<br>15 сентября</span>
+        </div>
+        <div class="meta-item">
+          <svg class="meta-icon" viewBox="0 0 32 32" aria-hidden="true">
+            <circle cx="16" cy="16" r="11.5"></circle>
+            <line x1="16" y1="9" x2="16" y2="16"></line>
+            <line x1="16" y1="16" x2="21" y2="19"></line>
+          </svg>
+          <span>6 недель</span>
+        </div>
+        <div class="meta-item wide">
+          <svg class="meta-icon" viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M16 28s9-8.2 9-15a9 9 0 1 0-18 0c0 6.8 9 15 9 15z"></path>
+            <circle cx="16" cy="13" r="3"></circle>
+          </svg>
+          <span>Очно в Москве + онлайн</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="note">Тестовый концепт · данные вымышлены</div>
+    <div class="side-label">HSE Executive Education</div>
+  </main>
+
+  <script>
+    document.fonts.ready.then(() => {
+      document.documentElement.dataset.fonts = "ready";
+    });
+  </script>
+</body>
+</html>

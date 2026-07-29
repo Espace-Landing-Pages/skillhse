@@ -1,0 +1,4 @@
+interface:
+  display_name: "Grandis-group: Метрика -> CRM заказы"
+  short_description: "Мост между Метрикой и CRM по заказам"
+  default_prompt: "Use $grandis-group-metrika-to-crm-orders to extract purchase IDs from Yandex Metrika and reconcile them with Bitrix24 or another CRM in a two-sheet audit."
